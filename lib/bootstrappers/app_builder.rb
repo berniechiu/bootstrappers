@@ -50,7 +50,7 @@ module Bootstrappers
     end
 
     def replace_email_sender_for_devise
-      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
+      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \'.+\'/ , "config.mailer_sender = Setting.email_sender"
     end
 
     def gitignore_files
